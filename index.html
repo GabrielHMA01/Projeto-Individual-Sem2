@@ -62,7 +62,7 @@ function create() {
 
         if (passarinho.x < 400 && passarinho.ida === true) {
             console.log("o passarinho vai para a direita e para baixo");
-            passarinho.x += 5;
+            passarinho.x += 6;
             passarinho.y += 4;
         }
         if (passarinho.x === 400 && passarinho.ida === true){
@@ -70,7 +70,7 @@ function create() {
         }
         if (passarinho.x >= 400 && passarinho.meio === true) {
             console.log("o passarinho vai para a direita e para cima");
-            passarinho.x += 5;
+            passarinho.x += 6;
             passarinho.y -= 4;
         }
 
@@ -84,7 +84,7 @@ function create() {
     
         if (passarinho.x > 400 && passarinho.ida === false) {
             console.log("o passarinho vai para a esquerda e para cima")
-            passarinho.x -= 5;
+            passarinho.x -= 10;
             passarinho.y -= 4;
         }
 
@@ -93,30 +93,12 @@ function create() {
         }
         if (passarinho.meio === false && passarinho.ida === false && passarinho.x <= 400){
             console.log("o passarinho vai para a esquerda e para baixo")
-            passarinho.x -= 5
+            passarinho.x -= 10
             passarinho.y += 4
         }
 
-        // if (passarinho.)
+
     }
-
-
-    // //eixo Y
-    // if (passarinho.y === 300) {
-    //     passarinho.subida = true;
-    // }
-
-    // if (passarinho.y < 420 && passarinho.subida === true) {
-    //     passarinho.y += 4;
-    // }
-
-    // if (passarinho.y === 420){
-    //     passarinho.subida = false;
-    // }
-
-    // if (passarinho.y > 300 && passarinho.subida === false) {
-    //     passarinho.y -= 4;
-    // }
 
 </script>
 
