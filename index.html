@@ -52,46 +52,71 @@ function create() {
     passarinho.anims.play('fly', true)
 }
 
-function update() { 
+    function update() { 
 
-    //eixo X
-    if (passarinho.x === 100) {
-        passarinho.setFlip(false, false);
-        passarinho.ida = true;
+        //eixo X
+        if (passarinho.x === 100) {
+            passarinho.setFlip(false, false);
+            passarinho.ida = true;
+        }
+
+        if (passarinho.x < 400 && passarinho.ida === true) {
+            console.log("o passarinho vai para a direita e para baixo");
+            passarinho.x += 5;
+            passarinho.y += 4;
+        }
+        if (passarinho.x === 400 && passarinho.ida === true){
+            passarinho.meio = true
+        }
+        if (passarinho.x >= 400 && passarinho.meio === true) {
+            console.log("o passarinho vai para a direita e para cima");
+            passarinho.x += 5;
+            passarinho.y -= 4;
+        }
+
+        if (passarinho.x === 700){
+            passarinho.setFlip(true, false);
+            passarinho.ida = false
+        }
+        if (passarinho.x === 700 && passarinho.ida === false){
+            passarinho.meio = false
+        }
+    
+        if (passarinho.x > 400 && passarinho.ida === false) {
+            console.log("o passarinho vai para a esquerda e para cima")
+            passarinho.x -= 5;
+            passarinho.y -= 4;
+        }
+
+        if (passarinho.x === 400 && passarinho.ida === false){
+            passarinho.meio = false
+        }
+        if (passarinho.meio === false && passarinho.ida === false && passarinho.x <= 400){
+            console.log("o passarinho vai para a esquerda e para baixo")
+            passarinho.x -= 5
+            passarinho.y += 4
+        }
+
+        // if (passarinho.)
     }
 
-    if (passarinho.x < 700 && passarinho.ida === true) {
-        console.log("o que acontece?");
-        passarinho.x += 5;
-    }
 
-    if (passarinho.x === 700){
-        passarinho.setFlip(true, false);
-        passarinho.ida = false;
-    }
+    // //eixo Y
+    // if (passarinho.y === 300) {
+    //     passarinho.subida = true;
+    // }
 
-    if (passarinho.x > 100 && passarinho.ida === false) {
-        passarinho.x -= 5;
-    }
+    // if (passarinho.y < 420 && passarinho.subida === true) {
+    //     passarinho.y += 4;
+    // }
 
-    //eixo Y
-    if (passarinho.y === 300) {
-        passarinho.subida = true;
-    }
+    // if (passarinho.y === 420){
+    //     passarinho.subida = false;
+    // }
 
-    if (passarinho.y < 420 && passarinho.subida === true) {
-        passarinho.y += 4;
-    }
-
-    if (passarinho.y === 420){
-        passarinho.subida = false;
-    }
-
-    if (passarinho.y > 300 && passarinho.subida === false) {
-        passarinho.y -= 4;
-    }
-
-}
+    // if (passarinho.y > 300 && passarinho.subida === false) {
+    //     passarinho.y -= 4;
+    // }
 
 </script>
 
